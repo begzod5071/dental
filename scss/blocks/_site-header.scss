@@ -1,0 +1,225 @@
+.site-header {
+    position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+  padding-bottom: 56px;
+}
+
+.site-header__container {
+  position: relative;
+}
+.site-header__box {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header__tel-box{
+  padding-left: 36px;
+  position: relative;
+  &::before{
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url("../../img/phone.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &:hover::before{
+    opacity: 0.8;
+  }
+}
+.site-header__call-text {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #272727;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+.site-header__tel {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #272727;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+.site-header__logo {
+  display: block;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+  &--bottom{
+    display: none;
+  }
+}
+.site-header__logo-img {
+  vertical-align: middle;
+}
+.site-header__toggle{
+  display: none;
+}
+.site-header__box-time {
+  position: relative;
+  padding-left: 36px;
+  &::before{
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 29px;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url("../../img/clock.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+.site-header__text {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #00B007;
+}
+.site-header__time {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #272727;
+}
+.site-header__bottom{
+  position: absolute;
+width: 100%;
+top: 84px;
+left: 0;
+  display: flex;
+  align-items: center;
+  padding: 24px 30px;
+  background-color: #0055B8;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.site-header__button{
+  display: none;
+}
+  .site-header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+.site-header__social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.site-header__social-item {
+  &:not(:last-child){
+    margin-right: 13px;
+  }
+}
+.site-header__social-link {
+  display: block;
+}
+.site-header__social-img {
+  vertical-align: middle;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+@include responsive (1024) {
+  .site-header__box{
+    display: none;
+  }
+  .site-header__bottom{
+    top: 0;
+    justify-content: space-between;
+    border-radius: 0;
+  }
+  .site-header__logo-box{
+    flex-grow: 1;
+  }
+  .site-header__logo{
+    &--bottom{
+      display: inline-block;
+    }
+  }
+  .site-header__social-list{
+    margin-left: 0;
+  }
+}
+
+@include responsive (850){
+  .site-header__toggle{
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    width: 25px;
+    height: 18px;
+    outline: none;
+background-color: transparent;
+content: "";
+background-image: url("../../img/gamburger.svg");
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center center;
+  }
+  .site-header--open .site-header__toggle{
+    background-image: url("../../img/vector.svg");
+  }
+.site-header__wrapper{
+  text-align: center;
+  display: none;
+}
+.site-header--open .site-header__wrapper{
+  position: absolute;
+  display: block;
+  top: 100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+  left: 0;
+  background-color: #0055B8;
+}
+.site-header--open .site-header__social-list{
+  justify-content: center;
+}
+}

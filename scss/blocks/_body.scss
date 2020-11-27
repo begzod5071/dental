@@ -1,0 +1,8 @@
+.body{
+  margin-top: 124px;
+}
+@include responsive (1024){
+  .body{
+    margin-top: 76px;
+  }
+}

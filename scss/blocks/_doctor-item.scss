@@ -1,0 +1,71 @@
+.doctor-item{
+  max-width: 548px;
+  display: flex;
+  padding-left: 98px;
+  position: relative;
+  &:not(:last-child){
+    margin-bottom: 22px;
+  }
+&::before{
+  position: absolute;
+  width: 72px;
+height: 70px;
+top: 0;
+left: 0;
+content: "";
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center center;
+}
+&--dentists::before{
+  background-image: url("../../img/expert.png");
+}
+&--technology::before{
+  background-image: url("../../img/modern.png");
+}
+&--location::before{
+  background-image: url("../../img/location.png");
+}
+
+}
+.doctor-item__title{
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.doctor-item__text{
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4D4D4D;
+}
+@include retina-bg{
+  .doctor-item{
+    &--dentists::before{
+      background-image: url("../../img/expert@2x.png");
+    }
+    &--technology::before{
+      background-image: url("../../img/modern@2x.png");
+    }
+    &--location::before{
+      background-image: url("../../img/location@2x.png");
+    }
+  }
+}
+@include responsive (376){
+  .doctor-item__text{
+    display: none;
+  }
+  .doctor-item{
+    &:not(:last-child){
+      margin-bottom: 62px;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+.location{
+  position: relative;
+  padding-top: 64px;
+}
+.location__container{
+  content: "";
+  background-image: url("../../img/servicesbg.png");
+  background-repeat: no-repeat;
+  background-position: 475px ;
+}
+.location__title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+  margin-bottom: 11px;
+  &::before{
+    display: block;
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #FFD600;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+}
+.location__text {
+  max-width: 879px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #4D4D4D;
+  margin-bottom: 35px;
+}
+.location__img{
+  display: block;
+  width: 1920px;
+  height: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.location__form{
+  position: absolute;
+  bottom: 100px;
+  width: 540px;
+  padding: 25px 34px 18px 33px;
+  background: #0055B8;
+  border-radius: 5px;
+}
+.location__form-title{
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+  margin-bottom: 29px;
+}
+.location__form-input{
+  padding: 20px 0 20px 13px;
+  width: 100%;
+  background: #0055B8;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  &:focus{
+    background-color: #fff;
+  }
+}
+.location__button{
+  padding: 17px 63px;
+  background: #FFD600;
+  border-radius: 5px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+  margin-bottom: 22px;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+.location__form-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.location__label{
+  width: 256px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.location__label-check{
+  width: 35px;
+  height: 35px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+}
+.location__checkbox:checked ~ .location__form-box .location__label-check{
+  background-image: url("../../img/okay.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+@include retina-bg{
+  .location__container{
+    background-image: url("../../img/servicesbg@2x.png");
+  }
+}
+@include responsive (1210){
+  .location__form{
+    position: absolute;
+    bottom: 100px;
+    width: 540px;
+    padding: 25px 34px 18px 33px;
+    background: #0055B8;
+    border-radius: 5px;
+  }
+}
+@include responsive (700){
+  .location__form{
+    width: 100%;
+  }
+}
+@include responsive (680){
+  .location__form{
+    position: static;
+    width: 100%;
+      }
+  .location{
+    display: flex;
+    flex-direction: column;
+      }
+
+}

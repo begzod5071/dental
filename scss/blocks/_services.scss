@@ -1,0 +1,117 @@
+.services {
+  content: "";
+  background-image: url("../../img/servicesbg.png");
+  background-repeat: no-repeat;
+  background-size: 275px auto;
+  background-position: calc(50% - 0px) 20px;
+  padding-bottom: 70px;
+}
+
+.services__container {
+  padding-left: 65px;
+  padding-right: 65px;
+  position: relative;
+}
+.services__title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+    color: #272727;
+    margin-bottom: 11px;
+    &::before{
+      display: block;
+      content: "";
+      width: 50px;
+      height: 3px;
+      background-color: #FFD600;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 16px;
+    }
+}
+.services__text {
+  max-width: 525px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+color: #4D4D4D;
+margin-bottom: 35px;
+&--team{
+max-width: 890px;
+width: 100%;
+margin-bottom: 21px;
+}
+}
+.services__button{
+  position: absolute;
+width: 42px;
+height: 49px;
+border: none;
+z-index: 25;
+outline: transparent;
+cursor: pointer;
+background-color: transparent;
+content: "";
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+&:hover{
+  opacity: 0.8;
+}
+&:active{
+  opacity: 0.6;
+}
+&--left{
+top: 280px;
+left: 0;
+background-image: url("../../img/toggle.svg");
+}
+&--right{
+  top: 280px;
+  right: 0;
+  background-image: url("../../img/toggle.svg");
+  transform: rotate(180deg);
+ }
+}
+
+.services__list{
+  display: flex;
+  align-items: center;
+    margin: 0;
+  padding: 20px;
+  list-style-type: none;
+  overflow-x: hidden;
+
+}
+.services__item{
+  text-align: center;
+  width: 200px;
+  padding: 28px 60px 24px 60px;
+  background: #FFFFFF;
+box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+&:not(:last-child){
+  margin-right: 35px;
+}
+}
+
+@include retina-bg{
+  .services{
+    background-image: url("../../img/servicesbg@2x.png");
+  }
+}
+@include responsive (376) {
+  .services__button{
+    display: none;
+  }
+}

@@ -1,0 +1,156 @@
+.advice {
+}
+
+.advice__container {
+  display: flex;
+  align-items: flex-start;
+}
+.advice__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.advice__item {
+  width: 300px;
+  padding: 39px 36px 56px 36px;
+  background: #FFD600;
+  border-radius: 5px;
+  &::before{
+    content: "";
+    width: 87px;
+    height: 86px;
+    display: block;
+    background-image: url("../../img/tooth.png");
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 19px;
+  }
+  &--prosthetics{
+    padding: 39px 50px 31px 50px;
+    background: #FFE040;
+    &::before{
+      background-image: url("../../img/Prosthetics.png");
+    }
+  }
+}
+.advice__title {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.advice__text {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #272727;
+}
+.advice__form {
+  width: 540px;
+  padding: 25px 34px 18px 33px;
+  background: #0055B8;
+  border-radius: 5px;
+  transform: translateY(-75px);
+}
+.advice__form-title {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+  margin-bottom: 29px;
+}
+.advice__form-input{
+  padding: 20px 0 20px 13px;
+  width: 100%;
+  background: #0055B8;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  &:focus{
+    background-color: #fff;
+  }
+}
+.advice__button{
+  padding: 17px 63px;
+  background: #FFD600;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+  margin-bottom: 22px;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+.advice__form-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.advice__label {
+  width: 256px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.advice__label-check {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+}
+.advice__checkbox:checked ~ .advice__form-box .advice__label-check{
+  background-image: url("../../img/okay.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+@include retina-bg{
+  .advice__item{
+    &::before{
+      background-image: url("../../img/tooth@2x.png");
+    }
+    &--prosthetics{
+      &::before{
+        background-image: url("../../img/Prosthetics@2x.png");
+      }
+    }
+  }
+}
+@include responsive (980){
+  .advice{
+    padding-bottom: 70px;
+  }
+  .advice__list{
+    display: none;
+  }
+  .advice__form{
+    width: 100%;
+    transform: translateY(0);
+  }
+  .advice__container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

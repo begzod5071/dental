@@ -14,12 +14,19 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-}
+  margin-top: 124px;
+  }
 
 img {
   max-width: 100%;
   height: auto;
+}
+@include responsive (1024){
+  body{
+    margin-top: 76px;
+  }
 }
